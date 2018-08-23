@@ -14,7 +14,7 @@ class Calculator
   end
 
   def divide(dividend, divisor)
-    return dividend / divisor
+    return dividend.to_f / divisor
   end
 
   def square(number)
@@ -42,7 +42,7 @@ RSpec.describe Calculator do
     end
   end
   describe '#multiply' do
-    it 'should return the multiple of number one and number two' do
+    it 'should return the product of number one and number two' do
       calculator = Calculator.new
       result = calculator.multiply(2, 3)
       expect(result).to eq(6)
